@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="estilo.style.css">
+</head>
+<body>
+    <h1>Calculadora de basal, Homens</h1>
+    <div class="conteiner">
+        <div class="first-step">
+            <p>Clique para calcular seu basal</p>
+            <button onclick="go(1,2)">Iniciar</button>
+        </div>
+        <div class="second-step">
+            <h3>Calculadora basal</h3>
+            <hr>
+            <label for="peso">Digite seu peso:</label>
+            <input type="number" placeholder="Seu peso" id="peso">
+            <br><br>
+            <label for="altura">Digite sua altura em cm:</label>
+            <input type="number" placeholder="Sua altura" id="altura">
+            <br><br>
+            <label for="idade">Digite sua idade:</label>
+            <input type="number" placeholder="Sua idade" id="idade">
+
+            <br><br>
+            <button onclick="validate()">calcular</button>
+
+        </div>
+        <div class="final-step">
+            <h3>Resultado</h3>
+            <p id="resultado"></p>
+            <button onclick="go(3,2)">Calcular novamente</button>
+            <button onclick="go(3,1)">Finalizar</button>
+        </div>
+    </div>
+    <div class="mulher">
+        <p id="basalmulher">
+            Calcular para mulheres <a href=""><strong>clique aqui</strong></a>
+        </p>
+    </div>
+</body>
+<script>
+    const firstDiv = document.querySelector('.first-step');
+    const secondDiv = document.querySelector('.second-step');
+    const finalDiv = document.querySelector('.final-step');
+    function go(currentStep, nextStep)
+    {
+        let dNone, dBlock;
+        if(currentStep == 1)
+        {
+            dNone = firstDiv;
+        }
+        else if (currentStep == 2)
+        {
+            dNone = secondDiv;
+        }
+        else 
+        {
+            dNone = finalDiv;
+        }
+        dNone.style.display = 'none';
+        if(nextStep == 1)
+        {
+            dBlock = firstDiv;
+        }
+        else if (nextStep == 2)
+        {
+            dBlock = secondDiv;
+        }
+        else 
+        {
+            dBlock = finalDiv;
+        }
+        dBlock.style.display = 'block';
+    }
+
+    function validate()
+    {
+        const peso = document.getElementById('peso')
+        const altura = document.getElementById('altura')
+        const idade = document.getElementById('idade')
+        peso.style.border = 'none';
+        altura.style.border = 'none';
+        idade.style.border = 'none';
+        if (!peso.value || !altura .value || !idade.value)
+        {
+            
+            if(!peso.value && !altura.value && !idade.value){
+                peso.style.border = '1px solid red';
+                altura.style.border = '1px solid red';
+                idade.style.border = '1px solid red';
+                
+            }
+
+            else if (!peso.value){
+                peso.style.border = '1px solid red';
+            }
+            else if (!altura.value){
+                altura.style.border = '1px solid red';
+            }
+            else if(!idade.value) {
+                idade.style.border = '1px solid red';
+            }
+            
+        }
+        else {
+            let harris = 66.47 + (13.75 * peso.value)+(5.003 * altura.value)-(6.775 * idade.value);
+            const result = document.getElementById('resultado');
+            result.innerHTML = `Seu basal é : ${harris}` 
+        }
+        go(2,3);
+    }
+    
+</script>
+</html>
