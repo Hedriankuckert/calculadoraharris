@@ -110,7 +110,8 @@
         else {
             let harris = 66.47 + (13.75 * peso.value)+(5.003 * altura.value)-(6.775 * idade.value);
             const result = document.getElementById('resultado');
-            result.innerHTML = `Seu basal é : ${harris}` 
+            result.innerHTML =`Seu basal é : ${Number.parseFloat(harris)}`;
+             
         }
         go(2,3);
     }
