@@ -5,10 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora</title>
-    <link rel="stylesheet" href="estilo.style.css">
+    <link rel="stylesheet" href="estilom.style.css">
 </head>
 <body>
-    <h1>Calculadora de basal, Homens</h1>
+    <h1>Calculadora de basal, mulher</h1>
     <div class="conteiner">
         <div class="first-step">
             <p>Clique para calcular seu basal</p>
@@ -37,9 +37,9 @@
             <button onclick="go(3,1)">Finalizar</button>
         </div>
     </div>
-    <div class="mulher">
-        <p id="basalmulher">
-            Calcular para mulheres <a href="basalmulher.html"><strong>clique aqui</strong></a>
+    <div class="homem">
+        <p id="basalhomem">
+            Calcular para Homens <a href="index.html"><strong>clique aqui</strong></a>
         </p>
     </div>
 </body>
@@ -108,7 +108,7 @@
             
         }
         else {
-            let harris = 66.47 + (13.75 * peso.value)+(5.003 * altura.value)-(6.775 * idade.value);
+            let harris = 665 + (9,6 * peso.value)+(1,8 * altura.value)-(4.7 * idade.value);
             const result = document.getElementById('resultado');
             result.innerHTML =`Seu basal é : ${Number.parseFloat(harris)}`;
              

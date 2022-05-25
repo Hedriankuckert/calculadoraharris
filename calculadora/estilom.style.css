@@ -1,0 +1,83 @@
+@charset "UTF-8";
+* {
+    padding: 0;
+    border: 0;
+}
+body {
+    max-width: 700px;
+    min-width: 320px;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.849), rgb(95, 93, 93), rgba(0, 0, 0, 0.822));
+    text-align: center;
+    color: rgba(231, 156, 250, 0.774);
+}
+h1 {
+    display: block;
+    text-align: center;
+}
+.conteiner {
+    max-width: 700px;
+    min-width: 320px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1em;
+    border-radius: 10px;
+}
+button {
+    background-color: darkgray;
+    color: white;
+    border: none;
+    padding: 1em;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.473);
+    cursor: pointer;
+}
+button:hover{
+    background-color: slategrey;
+}
+.final-step,
+.second-step{
+    display: none;
+}
+input {
+    max-width: 700px;
+    min-width: 320px;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+.resultado {
+    font-size: 25px;
+}
+
+div.homem {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 250%);
+    width: 50%;
+}
+#basalhomem {
+    border: 5px;
+    color: slategray;
+    background-color: rgba(57, 57, 58, 0.171);
+    border-radius: 10px;
+    padding: 5px;
+}
+#basalhomem > a{
+    text-decoration: none;
+    outline-color: none;
+    padding: 5px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.459);
+    border-radius: 5px;
+    color: slategray;
+}
+#basalhomem > a:hover{
+    text-decoration: underline;
+    color: rgba(20, 19, 19, 0.582);
+}
