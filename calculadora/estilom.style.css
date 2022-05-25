@@ -56,6 +56,8 @@ input {
 }
 
 div.homem {
+    max-width: 700px;
+    min-width: 320px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -63,7 +65,8 @@ div.homem {
     width: 50%;
 }
 #basalhomem {
-    border: 5px;
+    
+    border: 10px;
     color: slategray;
     background-color: rgba(57, 57, 58, 0.171);
     border-radius: 10px;
