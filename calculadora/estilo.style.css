@@ -79,6 +79,7 @@ div.mulher {
     color: rgb(240, 142, 219);
 }
 #descrição {
+    max-width: 50%;
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 10px;
 }
